@@ -35,11 +35,14 @@ $button: #f44f18;
   button {
     width: 200px;
     background: $button;
-    color: $whiteText;
+    color: #fff;
     padding: 20px;
     border-radius: 8px;
     border: none;
     margin: 0 auto;
+    background: $button;
+    font-family: inherit;
+    font-size: 18px; 
   }
 
 
