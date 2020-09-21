@@ -18,7 +18,7 @@ const About = () => {
                         <li>Providing the best web development</li>
                     </ol>
                     <p>What's your Nitch?  </p>
-                    <Link to={"/contact"}> <button> Contact </button> </Link>
+                    <Link to={"/contact"}> <button> Contact Us </button> </Link>
                 </div>
             </Zoom>
         </Layout>
