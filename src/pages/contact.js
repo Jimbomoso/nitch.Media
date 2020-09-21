@@ -20,13 +20,13 @@ export default class Contact extends React.Component {
         <Metadata title="Contact" description="Contact Nitch Media" />
         <Bounce top cascade>
           <div className="formBox">
-            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/xnqgeewz" method="post">
+            <form id="fs-frm" name="simple-contact-form" label="contact" accept-charset="utf-8" action="https://formspree.io/xnqgeewz" method="post">
               <fieldset id="fs-frm-inputs">
-                <label for="full-name">Full Name</label>
+                <label htmlFor="full-name">Full Name</label>
                 <input type="text" name="name" id="full-name" placeholder="name" required="true" />
-                <label for="email-address">Email Address</label>
+                <label htmlFor="email-address">Email Address</label>
                 <input type="email" name="_replyto" id="email-address" placeholder="email" required="true" />
-                <label for="message">Message</label>
+                <label htmlFor="message">Message</label>
                 <textarea rows="5" name="message" id="message" placeholder="How can we help?" required="true"></textarea>
                 <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission" />
               </fieldset>

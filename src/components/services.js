@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactTextTransition, { presets } from "react-text-transition";
 import Typist from 'react-typist';
 import Fade from 'react-reveal/Fade';
 import "../styles/services.scss";
@@ -69,12 +68,7 @@ class Services extends Component {
                     <Fade right>
                         <article className="inline">
                             <div className="card container">
-                            <p> Whatever the case, Nitch can help w/:<strong> <br /> <br /> <ReactTextTransition className="productText"
-                                text={texts[this.state.textFastIndex % texts.length]}
-                                spring={presets.genlte}
-                                direction={"down"}
-                                overflow
-                            />
+                            <p> Whatever the case, Nitch can help w/:<strong> <br /> <br /> 
                             </strong>
                             </p>
                             </div>
