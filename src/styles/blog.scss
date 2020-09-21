@@ -1,0 +1,17 @@
+@import "styles";
+
+.blogPost {
+    margin: 60px auto;
+    width: 80vw;
+    border-radius: 1px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.342);
+    background: rgba(32, 28, 28, 0.432);
+    color: $whiteText;
+    box-shadow: 5px 0px 2px $secondaryColor;
+}
+
+ul {
+    padding: 0; 
+}
+

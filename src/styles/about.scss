@@ -1,0 +1,38 @@
+@import "styles";
+
+.about-main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 60px;
+}
+
+.title {
+    color: rgba(255, 255, 255, 0.692);
+    text-align: left;
+}
+
+.subtitle {
+    text-align: left;
+}
+
+// @media(max-width: 768px) {
+//     .container {
+//         width: 100%;
+//     }
+//     .about-main-section {
+//       display: block;
+//       text-align: left;
+//     }
+//     .main-header {
+//         padding: 1rem;
+//     }
+//     .call-to-action {
+//         margin: 5vh auto;
+//         width: 90%;
+//     }
+//   }
+
+

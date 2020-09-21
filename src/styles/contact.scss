@@ -1,0 +1,37 @@
+@import "styles";
+
+fieldset {
+    border: none;
+    margin: 0 auto;
+}
+
+input,
+textarea, label {
+    display: block;
+    width: 80vw;
+    padding: 1%;
+    margin: 1% auto;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 4px;
+    border: none;
+}
+
+textarea {
+    height: 300px;
+}
+
+label {
+    color: $secondaryColor;
+}
+
+input, textarea {
+    background: $primaryColor;
+    color: #fff;
+}
+
+#submit {
+    background: $button;
+    width: 100px;    
+}
+
