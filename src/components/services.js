@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Typist from 'react-typist';
 import Fade from 'react-reveal/Fade';
 import "../styles/services.scss";
+import TextLoop from "react-text-loop";
 
 const randomNumber = () => Math.floor(Math.random() * 9999999999 + 10000000000);
 
@@ -48,19 +49,19 @@ class Services extends Component {
                 <section className="services">
                     <Fade left>
                         <article className="serviceHelp">
-                        <div className="card container">
-                            <Typist
-                                cursor={{ hideWhenDone: true }}
-                                onTypingDone={this.onHeaderTyped}
-                            >
-                                
+                            <div className="card container">
+                                <Typist
+                                    cursor={{ hideWhenDone: true }}
+                                    onTypingDone={this.onHeaderTyped}
+                                >
+
                                     <span> {paragraphs[0]}</span>
                                     <br /> <br />
                                     <Typist.Delay ms={500} />
                                     <span>{paragraphs[1]}</span>
-                            
-                            </Typist>
-                        </div>
+
+                                </Typist>
+                            </div>
                         </article>
                     </Fade>
                 </section>
@@ -68,9 +69,19 @@ class Services extends Component {
                     <Fade right>
                         <article className="inline">
                             <div className="card container">
-                            <p> Whatever the case, Nitch can help w/:<strong> <br /> <br /> 
-                            </strong>
-                            </p>
+                                <p> Whatever the case, Nitch can help w/:  </p>
+                                <TextLoop interval={1000} springConfig={{ stiffness: 180, damping: 8 }}>
+                                    <span> {texts[0]}</span>
+                                    <span> {texts[1]}</span>
+                                    <span> {texts[2]}</span>
+                                    <span> {texts[3]}</span>
+                                    <span> {texts[4]}</span>
+                                    <span> {texts[5]}</span>
+                                    <span> {texts[6]}</span>
+                                    <span> {texts[7]}</span>
+                                    <span> {texts[8]}</span>
+                                </TextLoop>
+
                             </div>
                         </article>
                     </Fade>
