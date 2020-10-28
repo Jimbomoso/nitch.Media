@@ -46,7 +46,7 @@ class Services extends Component {
     render() {
         return (
             <React.Fragment>
-                <section className="services">
+                <section className="services" role='main'>
                     <Fade left>
                         <article className="serviceHelp">
                             <div className="card container" role='main'>
@@ -65,7 +65,7 @@ class Services extends Component {
                         </article>
                     </Fade>
                 </section>
-                <section className="products">
+                <section className="products" role='main'>
                     <Fade right>
                         <article className="inline">
                             <div className="card container" role='main'>
