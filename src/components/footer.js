@@ -15,9 +15,9 @@ const Footer = () => {
     `
   )
   return (
-    <footer className={footerStyles.siteFooter} role="contentinfo">
+    <footer className={footerStyles.siteFooter}>
       <div className={footerStyles.container}>
-        <p>
+        <p role="contentinfo">
           &copy;{" "}{data.site.siteMetadata.author} All Rights Reserved {new Date().getFullYear().toString()} {" "} | Legal | Privacy
         </p>
       </div>

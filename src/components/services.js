@@ -49,7 +49,7 @@ class Services extends Component {
                 <section className="services">
                     <Fade left>
                         <article className="serviceHelp">
-                            <div className="card container">
+                            <div className="card container" role='main'>
                                 <Typist
                                     cursor={{ hideWhenDone: true }}
                                     onTypingDone={this.onHeaderTyped}
@@ -68,8 +68,8 @@ class Services extends Component {
                 <section className="products">
                     <Fade right>
                         <article className="inline">
-                            <div className="card container">
-                                <p> Whatever the case, Nitch can help w/:  </p>
+                            <div className="card container" role='main'>
+                                <p> Whatever the case, Nitch can help with:  </p>
                                 <TextLoop interval={1000} springConfig={{ stiffness: 180, damping: 8 }}>
                                     <span> {texts[0]}</span>
                                     <span> {texts[1]}</span>
@@ -81,7 +81,6 @@ class Services extends Component {
                                     <span> {texts[7]}</span>
                                     <span> {texts[8]}</span>
                                 </TextLoop>
-
                             </div>
                         </article>
                     </Fade>
