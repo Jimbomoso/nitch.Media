@@ -27,7 +27,7 @@ const Header = () => {
                     {data.site.siteMetadata.description}
                 </p>
             </div>
-            <nav className={headerStyles.navContainer}>
+            <nav className={headerStyles.navContainer} role="navigation">
                 <ul className={headerStyles.navList}>
                     <li>
                         <Link to="/" activeClassName={headerStyles.activeMenuItem}>Home</Link>
