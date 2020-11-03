@@ -1,39 +1,52 @@
 import React, { Component } from "react";
 import Fade from 'react-reveal/Fade';
 import "../styles/services.scss";
-import TextLoop from "react-text-loop";
-
-const randomNumber = () => Math.floor(Math.random() * 9999999999 + 10000000000);
-
-const texts = ["Websites", "Apps", "Landing pages", "SEO", "Marketing", "APIs", "Authentication", "Web annimations", "Forms", "Design", "Logos"];
 
 class Services extends Component {
-    state = {
-        number: randomNumber(),
-        textIndex: 0,
-        textFastIndex: 0,
-        paragraphIndex: 0,
-        renderMsg: false,
-    };
-
-    onHeaderTyped = () => {
-        this.setState({ renderMsg: true });
-    };
-
-    componentDidMount() {
-        setInterval(() => {
-            this.setState({
-                number: randomNumber(),
-                textIndex: this.state.textIndex + 1,
-                paragraphIndex: this.state.paragraphIndex + 1,
-            });
-        }, 4000);
-        setInterval(() => {
-            this.setState({
-                textFastIndex: this.state.textFastIndex + 1
-            });
-        }, 400);
+    constructor(props) {
+        super(props);
+        this.state = "";
     }
+    componentDidMount() {
+        let product = [
+            "Websites",
+            "Apps",
+            "Landing pages",
+            "SEO", "Marketing",
+            "APIs", "Authentication",
+            "Web annimations",
+            "Forms",
+            "Design",
+            "Logos"],
+            intervalDurationMs = 300,
+            currentIndex = 0,
+            maxNumTimes = -1,
+            numTimesRan = 0;
+
+        let interval = setInterval(function () {
+            if (maxNumTimes !== 0) {
+                this.setState({
+                    productText: product[currentIndex]
+                });
+                currentIndex++;
+                if (currentIndex > product.length - 1) {
+                    if (maxNumTimes === -1) {
+                        currentIndex = 0;
+                    } else {
+                        numTimesRan++;
+                        if (numTimesRan === maxNumTimes) {
+                            clearInterval(interval);
+                        } else {
+                            currentIndex = 0;
+                        }
+                    }
+                }
+            } else {
+                clearInterval(interval);
+            }
+        }.bind(this), intervalDurationMs);
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -63,25 +76,7 @@ class Services extends Component {
                                 <div className="card container" role='main'>
                                     <p> Whatever the case, Nitch can help with: </p>
                                     <div>
-                                        <TextLoop mask={true} fade={false} >
-                                            <span className="productText"> {texts[0]}</span>
-                                            <span className="productText"> {texts[1]}</span>
-                                            <span className="productText"> {texts[2]}</span>
-                                        </TextLoop>
-                                    </div>
-                                    <div>
-                                        <TextLoop delay={500} mask={true} fade={false} >
-                                            <span className="productText"> {texts[3]}</span>
-                                            <span className="productText"> {texts[4]}</span>
-                                            <span className="productText"> {texts[5]}</span>
-                                        </TextLoop>
-                                    </div>
-                                    <div>
-                                        <TextLoop delay={1000} mask={true} fade={false} >
-                                            <span className="productText"> {texts[6]}</span>
-                                            <span className="productText"> {texts[7]}</span>
-                                            <span className="productText"> {texts[8]}</span>
-                                        </TextLoop>
+                                        {this.state.productText}
                                     </div>
                                 </div>
                             </article>
