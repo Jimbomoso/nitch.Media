@@ -76,7 +76,7 @@ class Services extends Component {
                                 <div className="card container" role='main'>
                                     <p> Whatever the case, Nitch can help with: </p>
                                     <div>
-                                        {this.state.productText}
+                                        <span className="productText">{this.state.productText}</span>
                                     </div>
                                 </div>
                             </article>
