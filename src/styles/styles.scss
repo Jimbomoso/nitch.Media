@@ -4,7 +4,7 @@ $primaryColor: #464646;
 $secondaryColor: #fa0303;
 $whiteText: #fff;
 $background: rgb(8, 8, 8);
-$button: #f44f18;
+$button: #fa0303;
 
 * {
     box-sizing: border-box;
@@ -40,7 +40,6 @@ $button: #f44f18;
     border-radius: 8px;
     border: none;
     margin: 0 auto;
-    background: $button;
     font-family: inherit;
     font-size: 18px; 
   }
