@@ -2,15 +2,21 @@
 
 .products,
 .serviceHelp {
-    display: flex;
     justify-content: center;
-    margin: 40px auto;
-    height: 60vh;
-    padding: 300px 10px;
+    margin: 50px 0;
     color: $whiteText;
     font-size: 18px;
 }
 
 .productText {
     color: $secondaryColor;
+}
+
+#serviceContent {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#divider {
+    height: 200px;
 }

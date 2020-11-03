@@ -1,19 +1,11 @@
 import React, { Component } from "react";
-import Typist from 'react-typist';
 import Fade from 'react-reveal/Fade';
 import "../styles/services.scss";
 import TextLoop from "react-text-loop";
 
 const randomNumber = () => Math.floor(Math.random() * 9999999999 + 10000000000);
 
-const texts = ["websites", "apps", "landing pages", "SEO", "marketing", "APIs", "authentication", "annimations", "forms"];
-
-const paragraphs = [
-    "Do you need help building a new website...",
-    "Or help refreshing one that is getting older?",
-    "to add a cool new feature to your site",
-    "help with a new app idea?"
-];
+const texts = ["Websites", "Apps", "Landing pages", "SEO", "Marketing", "APIs", "Authentication", "Web annimations", "Forms", "Design", "Logos"];
 
 class Services extends Component {
     state = {
@@ -42,50 +34,62 @@ class Services extends Component {
             });
         }, 400);
     }
-
     render() {
         return (
             <React.Fragment>
-                <section className="services" role='main'>
-                    <Fade left>
-                        <article className="serviceHelp">
-                            <div className="card container" role='main'>
-                                <Typist
-                                    cursor={{ hideWhenDone: true }}
-                                    onTypingDone={this.onHeaderTyped}
-                                >
+                <div id='serviceContent'>
+                    <section className="services" role='main'>
+                        <Fade left>
+                            <article className="serviceHelp">
+                                <div className="card container" role='main'>
+                                    <Fade left> <p> Do you need help building a new website </p> </Fade>
+                                    <Fade left>
+                                        <p> Or help refreshing one that is getting older? </p>
+                                    </Fade>
+                                    <Fade left>
+                                        <p> Want to add a cool new feature to your site </p>
+                                    </Fade>
+                                    <Fade left>
+                                        <p> or help with a new app idea? </p>
+                                    </Fade>
+                                </div>
+                            </article>
+                        </Fade>
+                    </section>
+                    <div id="divider"></div>
+                    <section className="products" role='main'>
+                        <Fade right>
+                            <article className="productsHelp">
+                                <div className="card container" role='main'>
+                                    <p> Whatever the case, Nitch can help with: </p>
+                                    <div>
+                                        <TextLoop mask={true} fade={false} >
+                                            <span className="productText"> {texts[0]}</span>
+                                            <span className="productText"> {texts[1]}</span>
+                                            <span className="productText"> {texts[2]}</span>
+                                        </TextLoop>
+                                    </div>
+                                    <div>
+                                        <TextLoop delay={500} mask={true} fade={false} >
+                                            <span className="productText"> {texts[3]}</span>
+                                            <span className="productText"> {texts[4]}</span>
+                                            <span className="productText"> {texts[5]}</span>
+                                        </TextLoop>
+                                    </div>
+                                    <div>
+                                        <TextLoop delay={1000} mask={true} fade={false} >
+                                            <span className="productText"> {texts[6]}</span>
+                                            <span className="productText"> {texts[7]}</span>
+                                            <span className="productText"> {texts[8]}</span>
+                                        </TextLoop>
+                                    </div>
+                                </div>
+                            </article>
 
-                                    <span> {paragraphs[0]}</span>
-                                    <br /> <br />
-                                    <Typist.Delay ms={500} />
-                                    <span>{paragraphs[1]}</span>
-
-                                </Typist>
-                            </div>
-                        </article>
-                    </Fade>
-                </section>
-                <section className="products" role='main'>
-                    <Fade right>
-                        <article className="inline">
-                            <div className="card container" role='main'>
-                                <p> Whatever the case, Nitch can help with:  </p>
-                                <TextLoop interval={1000} springConfig={{ stiffness: 180, damping: 8 }}>
-                                    <span className="productText"> {texts[0]}</span>
-                                    <span className="productText"> {texts[1]}</span>
-                                    <span className="productText"> {texts[2]}</span>
-                                    <span className="productText"> {texts[3]}</span>
-                                    <span className="productText"> {texts[4]}</span>
-                                    <span className="productText"> {texts[5]}</span>
-                                    <span className="productText"> {texts[6]}</span>
-                                    <span className="productText"> {texts[7]}</span>
-                                    <span className="productText"> {texts[8]}</span>
-                                </TextLoop>
-                            </div>
-                        </article>
-                    </Fade>
-                </section>
-            </React.Fragment>
+                        </Fade>
+                    </section>
+                </div>
+            </React.Fragment >
         );
     }
 }
