@@ -26,7 +26,8 @@ label {
 }
 
 input, textarea {
-    background: $primaryColor;
+    // background: $primaryColor;
+    border: 1px solid black;
     color: #fff;
 }
 

@@ -71,15 +71,15 @@ class Services extends Component {
                             <div className="card container" role='main'>
                                 <p> Whatever the case, Nitch can help with:  </p>
                                 <TextLoop interval={1000} springConfig={{ stiffness: 180, damping: 8 }}>
-                                    <span> {texts[0]}</span>
-                                    <span> {texts[1]}</span>
-                                    <span> {texts[2]}</span>
-                                    <span> {texts[3]}</span>
-                                    <span> {texts[4]}</span>
-                                    <span> {texts[5]}</span>
-                                    <span> {texts[6]}</span>
-                                    <span> {texts[7]}</span>
-                                    <span> {texts[8]}</span>
+                                    <span className="productText"> {texts[0]}</span>
+                                    <span className="productText"> {texts[1]}</span>
+                                    <span className="productText"> {texts[2]}</span>
+                                    <span className="productText"> {texts[3]}</span>
+                                    <span className="productText"> {texts[4]}</span>
+                                    <span className="productText"> {texts[5]}</span>
+                                    <span className="productText"> {texts[6]}</span>
+                                    <span className="productText"> {texts[7]}</span>
+                                    <span className="productText"> {texts[8]}</span>
                                 </TextLoop>
                             </div>
                         </article>

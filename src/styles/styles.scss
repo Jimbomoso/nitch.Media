@@ -15,7 +15,6 @@ $button: #fa0303;
     margin: 0;
     line-height: 1.4283;
     font-family: "Segoe UI", Roboto, Verdana, "Helvetica Neue", sans-serif;
-    background: $background;
   }
   h1,
   h2,
@@ -40,6 +39,7 @@ $button: #fa0303;
     border-radius: 8px;
     border: none;
     margin: 0 auto;
+    background: $button;
     font-family: inherit;
     font-size: 18px; 
   }
@@ -71,8 +71,8 @@ $button: #fa0303;
       background: rgba(32, 28, 28, 0.432);
       border-radius: 1px;
       height: 300px;
-      width: 300px;
       padding: 60px;
       line-height: 1.5;
       box-shadow: 5px 5px 1px $secondaryColor;
+      text-align: center;
     }
