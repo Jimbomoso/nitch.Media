@@ -52,6 +52,7 @@ class Services extends Component {
             <React.Fragment>
                 <div id='serviceContent'>
                     <section className="services" role='main'>
+                        <div id="serviceBG">
                         <Fade left>
                             <article className="serviceHelp">
                                 <div className="card container" role='main'>
@@ -68,8 +69,10 @@ class Services extends Component {
                                 </div>
                             </article>
                         </Fade>
+                        </div>
                     </section>
                     <div id="divider"></div>
+                    <div id="productBG">
                     <section className="products" role='main'>
                         <Fade right>
                             <article className="productsHelp">
@@ -80,9 +83,9 @@ class Services extends Component {
                                     </div>
                                 </div>
                             </article>
-
                         </Fade>
                     </section>
+                    </div>
                 </div>
             </React.Fragment >
         );

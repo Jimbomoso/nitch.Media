@@ -8,7 +8,7 @@ const Home = () => {
 
     return (
         <div>
-            <Metadata title="Home" description="Nitch Media Home Page" />
+            <Metadata title="Home" description="Nitch Media is a web development agency who builds modern, high-performance, high-quality websites and apps." />
             <Zoom>
                 <section className="hero" role='banner'>
                     <div className="heroText" role='main'>
